@@ -4,7 +4,7 @@ public class Calendar {
 
     public static void main(String[] args) {
 
-        daysInMonth();
+        whileLoop();
 
     }
 
@@ -14,23 +14,70 @@ public class Calendar {
 
 
         System.out.println("Pick a Month between 1-12 ");
-        int month = input.nextInt();
+        int x = input.nextInt();
 
-        if (month <= 0 || month >= 13) {
-            System.out.println("Invalid Month");
+        if (x == 1 || x == 3 || x == 5 || x == 7 || x == 8 || x == 10 || x == 12) {
+            System.out.println(31);
 
-        } else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
-            System.out.println("There are 31 days in this month.");
-
-        } else if (month == 2) {
-            System.out.println("There are 28 days in this month.");
+        } else if (x == 2) {
+            System.out.println(28);
 
         } else {
-            System.out.println("There are 30 days in this month.");
+            System.out.println(30);
+
+        }
+
+    }
+
+    public static void booOne() {
+
+        boolean x = true;
+        boolean y = false;
+
+        if(x && y) {
+            System.out.println("a");
+        } else if (x || y) {
+            System.out.println("b");
+        } else if (!x) {
+            System.out.println("c");
+        } else {
+            System.out.println("d");
+        }
+
+    }
+
+    public static void forLoop() {
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("i = " + i);
+        }
+
+    }
+
+    public static void playGame() {
+
+        Scanner player1 = new Scanner(System.in);
+        String playAgain = player1.next();
+
+
+    }
+
+    public static void whileLoop() {
+
+        Scanner input = new Scanner(System.in);
+
+        String playAgain = "yes";
+        while (playAgain.equals("yes")) {
+            playGame();
+            playAgain = input.next();
 
         }
 
 
     }
 }
+
+
+
+
 
